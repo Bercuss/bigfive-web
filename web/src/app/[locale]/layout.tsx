@@ -4,7 +4,6 @@ import { fontSans } from '@/config/fonts';
 import { Providers } from '../providers';
 import { Navbar } from '@/components/navbar';
 import clsx from 'clsx';
-import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
@@ -113,7 +112,6 @@ export default async function RootLayout({
               {children}
               <CookieBanner />
             </main>
-            <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
         <Script
