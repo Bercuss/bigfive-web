@@ -70,14 +70,6 @@ export const siteConfig = {
     {
       label: 'compare',
       href: '/compare'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'about',
-      href: '/about'
     }
   ],
   navMenuItems: [
@@ -92,46 +84,9 @@ export const siteConfig = {
     {
       label: 'compare_with',
       href: '/compare'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
     }
   ],
-  footerLinks: [
-    {
-      label: 'home',
-      href: '/'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
-    }
-  ],
+  footerLinks: [],
   links: {
     github: 'https://github.com/rubynor/bigfive-web',
     twitter: 'https://twitter.com/rubynor',
