@@ -226,7 +226,7 @@ export const Survey = ({
   return (
     <div className='mt-2'>
       {isMounted && (
-        <Modal isOpen={showIdModal} backdrop='blur' isDismissible={false}>
+        <Modal isOpen={showIdModal} backdrop='blur' isDismissable={false}>
           <ModalContent>
             <ModalHeader className='flex flex-col gap-1'>
               Test Identifier
