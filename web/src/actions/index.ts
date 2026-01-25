@@ -76,19 +76,21 @@ export async function saveTest(testResult: DbResult) {
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
     
-    // If customId is provided, check if it already exists
+    // If customId is provided, check if it already exists as _id
+    let docToInsert = { ...testResult };
     if (testResult.customId) {
-      const existing = await collection.findOne({ customId: testResult.customId });
+      const existing = await collection.findOne({ _id: testResult.customId });
       if (existing) {
         throw new B5Error({
           name: 'SavingError',
           message: `The identifier "${testResult.customId}" is already in use. Please choose a different identifier!`
         });
       }
+      docToInsert = { ...testResult, _id: testResult.customId };
+      delete docToInsert.customId;
     }
-    
-    const result = await collection.insertOne(testResult);
-    return { id: testResult.customId || result.insertedId.toString() };
+    const result = await collection.insertOne(docToInsert);
+    return { id: (testResult.customId || result.insertedId.toString()) };
   } catch (error) {
     if (error instanceof B5Error) {
       throw error;
