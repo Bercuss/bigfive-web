@@ -79,7 +79,7 @@ export async function saveTest(testResult: DbResult) {
     // If customId is provided, check if it already exists as _id
     let docToInsert = { ...testResult };
     if (testResult.customId) {
-      const existing = await collection.findOne({ _id: testResult.customId });
+      const existing = await collection.findOne({ _id: testResult.customId as any });
       if (existing) {
         throw new B5Error({
           name: 'SavingError',
