@@ -19,6 +19,7 @@ export type DbResult = {
   timeElapsed: number;
   dateStamp: string;
   answers: Answer[];
+  customId?: string;
 };
 
 export type Feedback = {

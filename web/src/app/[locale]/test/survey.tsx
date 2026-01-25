@@ -6,6 +6,14 @@ import { RadioGroup, Radio } from '@nextui-org/radio';
 import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from '@nextui-org/modal';
+import { Input } from '@nextui-org/input';
 
 import { CloseIcon, InfoIcon } from '@/components/icons';
 import { type Question } from '@bigfive-org/questions';
@@ -39,8 +47,16 @@ export const Survey = ({
   const [loading, setLoading] = useState(false);
   const [restored, setRestored] = useState(false);
   const [inProgress, setInProgress] = useState(false);
+  const [showIdModal, setShowIdModal] = useState(true);
+  const [customId, setCustomId] = useState('');
+  const [idError, setIdError] = useState('');
+  const [isMounted, setIsMounted] = useState(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -148,13 +164,29 @@ export const Survey = ({
       invalid: false,
       timeElapsed: seconds,
       dateStamp: new Date(),
-      answers
+      answers,
+      customId: customId || undefined
     });
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
+    localStorage.removeItem('testCustomId');
     console.log(result);
     localStorage.setItem('resultId', result.id);
     router.push(`/result/${result.id}`);
+  }
+
+  function handleStartTest() {
+    if (!customId.trim()) {
+      setIdError('Identifier is required!');
+      return;
+    }
+    if (customId.length < 3) {
+      setIdError('Identifier must be at least 3 characters long!');
+      return;
+    }
+    localStorage.setItem('testCustomId', customId);
+    setShowIdModal(false);
+    setIdError('');
   }
 
   function dataInLocalStorage() {
@@ -171,11 +203,16 @@ export const Survey = ({
 
   function restoreDataFromLocalStorage() {
     const data = localStorage.getItem('b5data');
+    const savedCustomId = localStorage.getItem('testCustomId');
     if (data) {
       const { answers, currentQuestionIndex } = JSON.parse(data);
       setAnswers(answers);
       setCurrentQuestionIndex(currentQuestionIndex);
       setRestored(true);
+    }
+    if (savedCustomId) {
+      setCustomId(savedCustomId);
+      setShowIdModal(false);
     }
   }
 
@@ -188,6 +225,46 @@ export const Survey = ({
 
   return (
     <div className='mt-2'>
+      {isMounted && (
+        <Modal isOpen={showIdModal} backdrop='blur' isDismissible={false}>
+          <ModalContent>
+            <ModalHeader className='flex flex-col gap-1'>
+              Test Identifier
+            </ModalHeader>
+            <ModalBody>
+              <p>
+                Please enter a unique identifier for this test. You can use this identifier later to retrieve your results.
+              </p>
+              <Input
+                type='text'
+                label='Identifier'
+                placeholder='e.g. John_Smith_2024'
+                value={customId}
+                onChange={(e) => {
+                  setCustomId(e.target.value);
+                  setIdError('');
+                }}
+                isInvalid={!!idError}
+                errorMessage={idError}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleStartTest();
+                  }
+                }}
+              />
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                color='primary'
+                onPress={handleStartTest}
+                disabled={!customId.trim()}
+              >
+                Start Test
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      )}
       <Progress
         aria-label='Progress bar'
         value={progress}

@@ -27,10 +27,22 @@ export async function getTestResult(
 ): Promise<Report | undefined> {
   'use server';
   try {
-    const query = { _id: new ObjectId(id) };
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
-    const report = await collection.findOne(query);
+    
+    // Try to find by custom ID first, then by MongoDB ObjectId
+    let report = null;
+    try {
+      const query = { _id: new ObjectId(id) };
+      report = await collection.findOne(query);
+    } catch (e) {
+      // If not a valid ObjectId, try custom ID
+    }
+    
+    if (!report) {
+      report = await collection.findOne({ customId: id });
+    }
+    
     if (!report) {
       console.error(`The test results with id ${id} are not found!`);
       throw new B5Error({
@@ -63,9 +75,24 @@ export async function saveTest(testResult: DbResult) {
   try {
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
+    
+    // If customId is provided, check if it already exists
+    if (testResult.customId) {
+      const existing = await collection.findOne({ customId: testResult.customId });
+      if (existing) {
+        throw new B5Error({
+          name: 'SavingError',
+          message: `The identifier "${testResult.customId}" is already in use. Please choose a different identifier!`
+        });
+      }
+    }
+    
     const result = await collection.insertOne(testResult);
-    return { id: result.insertedId.toString() };
+    return { id: testResult.customId || result.insertedId.toString() };
   } catch (error) {
+    if (error instanceof B5Error) {
+      throw error;
+    }
     console.error(error);
     throw new B5Error({
       name: 'SavingError',

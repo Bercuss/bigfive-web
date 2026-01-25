@@ -4,7 +4,7 @@ date: 2021-12-24
 description: An article on the personality trait agreeableness.
 image: '/blog/traits/agreeableness_2.webp'
 author:
-  name: 'Jonas Enge'
+  name: Jonas Enge
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
   avatar: '/avatars/maccyber.webp'
