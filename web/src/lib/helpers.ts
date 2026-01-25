@@ -5,8 +5,12 @@ export const formatId = (id: string): string => {
     .replaceAll(' ', '');
 };
 
-export const validId: (id: string) => boolean = (id: string) =>
-  /^[0-9a-fA-F]{24}$/.test(id);
+export const validId: (id: string) => boolean = (id: string) => {
+  // Accept MongoDB ObjectIds (24 hex characters) or custom IDs (3+ characters, alphanumeric with underscores/hyphens)
+  const isMongoId = /^[0-9a-fA-F]{24}$/.test(id);
+  const isCustomId = /^[a-z0-9_-]{3,}$/i.test(id);
+  return isMongoId || isCustomId;
+};
 
 export const formatAndValidateId = (id: string): boolean => {
   const formattedId = formatId(id);

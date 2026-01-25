@@ -49,14 +49,14 @@ export const GetResultPage = ({
           type='text'
           label='ID'
           labelPlacement='outside'
-          placeholder='58a70606a835c400c8b38e84'
+          placeholder='John_Smith_2024'
           startContent={
             <ResultIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
           }
           isInvalid={isInvalidId}
           color={isInvalidId ? 'danger' : 'default'}
           onValueChange={setId}
-          errorMessage={isInvalidId && 'Please enter a valid ID'}
+          errorMessage={isInvalidId && 'Please enter a valid ID (custom ID or result ID)'}
           value={id}
         />
       </div>

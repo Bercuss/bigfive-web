@@ -38,7 +38,7 @@ export default async function ResultPage({
   let report;
 
   try {
-    report = await getTestResult(params.id.substring(0, 24), searchParams.lang);
+    report = await getTestResult(params.id, searchParams.lang);
   } catch (error) {
     throw new Error('Could not retrieve report');
   }
