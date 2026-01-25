@@ -89,7 +89,7 @@ export async function saveTest(testResult: DbResult) {
       docToInsert = { ...testResult, _id: testResult.customId };
       delete docToInsert.customId;
     }
-    const result = await collection.insertOne(docToInsert);
+    const result = await collection.insertOne(docToInsert as any);
     return { id: (testResult.customId || result.insertedId.toString()) };
   } catch (error) {
     if (error instanceof B5Error) {
