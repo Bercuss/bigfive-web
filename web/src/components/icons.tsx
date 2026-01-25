@@ -3,7 +3,7 @@ import { IconSvgProps } from '@/types';
 
 // https://icon-sets.iconify.design
 
-export const Logo = ({ size = 200, width, height, ...props }: IconSvgProps) => (
+export const Logo = ({ size = 200, width, height, ...props }: any) => (
   <img
     src="/nev_V.svg"
     alt="SWAN"

@@ -10,7 +10,6 @@ import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
-import useTextDirection from '@/hooks/use-text-direction';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
 
@@ -86,7 +85,8 @@ export default async function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
-  const direction = useTextDirection(locale);
+  // RTL languages: ar, fa, he, ur
+  const direction = ['ar', 'fa', 'he', 'ur'].includes(locale) ? 'rtl' : 'ltr';
 
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
