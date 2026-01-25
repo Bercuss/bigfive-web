@@ -30,19 +30,20 @@ export async function getTestResult(
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
     
-    // Try to find by custom ID first, then by MongoDB ObjectId
+    // Try to find by ObjectId, then by _id (string), then by customId
     let report = null;
     try {
       const query = { _id: new ObjectId(id) };
       report = await collection.findOne(query);
     } catch (e) {
-      // If not a valid ObjectId, try custom ID
+      // If not a valid ObjectId, try _id as string
+      report = await collection.findOne({ _id: id } as any);
     }
-    
+
     if (!report) {
       report = await collection.findOne({ customId: id });
     }
-    
+
     if (!report) {
       console.error(`The test results with id ${id} are not found!`);
       throw new B5Error({
