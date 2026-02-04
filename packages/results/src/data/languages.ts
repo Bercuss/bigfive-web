@@ -3,69 +3,11 @@ export interface Language {
   name: string
 }
 
-export type LanguageCode = 'de' | 'da' | 'el' | 'en' | 'es' | 'fr' | 'he' | 'is' | 'it' | 'nl' | 'no' | 'ar' | 'pt-br' | 'id' | 'ro'
+export type LanguageCode = 'en' | 'hu';
 
 const languages: Language[] = [
-  {
-    code: 'de',
-    name: 'Deutsch'
-  },
-  {
-    code: 'da',
-    name: 'Danish'
-  },
-  {
-    code: 'el',
-    name: 'Greek'
-  },
-  {
-    code: 'en',
-    name: 'English'
-  },
-  {
-    code: 'es',
-    name: 'Spanish'
-  },
-  {
-    code: 'fr',
-    name: 'French'
-  },
-  {
-    code: 'he',
-    name: 'Hebrew'
-  },
-  {
-    code: 'is',
-    name: 'Icelandic'
-  },
-  {
-    code: 'it',
-    name: 'Italian'
-  },
-  {
-    code: 'nl',
-    name: 'Dutch'
-  },
-  {
-    code: 'no',
-    name: 'Norwegian'
-  },
-  {
-    code: 'ar',
-    name: 'Arabic'
-  },
-  {
-    code: 'pt-br',
-    name: 'Portuguese Brazilian'
-  },
-  {
-    code: 'id',
-    name: 'Indonesian'
-  },
-  {
-    code: 'ro',
-    name: 'Romanian'
-  }
-]
+  { code: 'en', name: 'English' },
+  { code: 'hu', name: 'Hungarian' }
+];
 
 export default languages
