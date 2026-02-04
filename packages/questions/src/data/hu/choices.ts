@@ -1,12 +1,12 @@
 const choices = {
   plus: [
     {
-      text: 'Nagyon pontatlan',
+      text: 'Egyáltalán nem iagz rám',
       score: 1,
       color: 1
     },
     {
-      text: 'Mérsékelten pontatlan',
+      text: 'Nagyon kicsit igaz rám',
       score: 2,
       color: 2
     },
@@ -16,24 +16,24 @@ const choices = {
       color: 3
     },
     {
-      text: 'Mérsékelten pontos',
+      text: 'Viszonylag igaz rám',
       score: 4,
       color: 4
     },
     {
-      text: 'Nagyon pontos',
+      text: 'Kifejezetten igaz rám',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Nagyon pontatlan',
+      text: 'Egyáltalán nem igaz rám',
       score: 5,
       color: 1
     },
     {
-      text: 'Mérsékelten pontatlan',
+      text: 'Nagyon kicsit igaz rám',
       score: 4,
       color: 2
     },
@@ -43,12 +43,12 @@ const choices = {
       color: 3
     },
     {
-      text: 'Mérsékelten pontos',
+      text: 'Viszonylag pontos',
       score: 2,
       color: 4
     },
     {
-      text: 'Nagyon pontos',
+      text: 'Kifejezetten igaz rám',
       score: 1,
       color: 5
     }
