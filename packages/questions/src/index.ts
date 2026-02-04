@@ -13,7 +13,7 @@ export async function getItems(languageCode: LanguageCode = 'en'): Promise<Quest
       choices: choices[question.keyed]
     }))
   } catch (error) {
-    console.log(error)
+
     throw new Error(`Inventory ./data/${languageCode}/questions not found. Try another language input.`)
   }
 }

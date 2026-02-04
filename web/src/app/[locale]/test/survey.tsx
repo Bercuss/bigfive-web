@@ -17,9 +17,9 @@ import { Input } from '@nextui-org/input';
 
 import { CloseIcon, InfoIcon } from '@/components/icons';
 import { type Question } from '@bigfive-org/questions';
-import { sleep, formatTimer, isDev } from '@/lib/helpers';
+import { sleep } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
-import useTimer from '@/hooks/useTimer';
+// useTimer import törölve
 import { type Answer } from '@/types';
 import { Card, CardHeader } from '@nextui-org/card';
 
@@ -52,7 +52,7 @@ export const Survey = ({
   const [idError, setIdError] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const { width } = useWindowDimensions();
-  // const seconds = useTimer();
+  // nem használt seconds változó törölve
 
   useEffect(() => {
     setIsMounted(true);
@@ -68,7 +68,7 @@ export const Survey = ({
   useEffect(() => {
     const restoreData = () => {
       if (dataInLocalStorage()) {
-        console.log('Restoring data from local storage');
+
         restoreDataFromLocalStorage();
       }
     };
@@ -170,7 +170,7 @@ export const Survey = ({
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
     localStorage.removeItem('testCustomId');
-    console.log(result);
+
     localStorage.setItem('resultId', result.id);
     router.push(`/result/${result.id}`);
   }
@@ -217,7 +217,7 @@ export const Survey = ({
   }
 
   function clearDataInLocalStorage() {
-    console.log('Clearing data from local storage');
+
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
     location.reload();
@@ -356,11 +356,13 @@ export const Survey = ({
           </Button>
         )}
 
+        {/*
         {isDev && !isTestDone && (
           <Button color='primary' onClick={skipToEnd}>
             Skip to end (dev)
           </Button>
         )}
+        */}
       </div>
     </div>
   );
