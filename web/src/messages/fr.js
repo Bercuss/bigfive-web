@@ -9,9 +9,9 @@ const french = {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
-      description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        title: 'Swan személyiségelemző teszt',
+        description:
+          'Próbáld ki a Swan személyiségelemző tesztet, amely tudományosan megalapozott módszerrel segít jobban megismerni önmagad és személyiséged főbb jellemzőit.'
     },
     title: 'Test de personnalité Big Five',
     call_to_action: 'Faites le test gratuit maintenant',

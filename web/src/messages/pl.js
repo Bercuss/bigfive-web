@@ -63,9 +63,9 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'O nas',
       description:
-        'BigFive jest prowadzony przez bardzo aktywny i zaangażowany zespół, który ciągle rozwija projekt.'
-    }
-  },
+      title: 'Swan személyiségelemző teszt',
+      description:
+        'Próbáld ki a Swan személyiségelemző tesztet, amely tudományosan megalapozott módszerrel segít jobban megismerni önmagad és személyiséged főbb jellemzőit.'
   toolbar: {
     home: 'Strona Główna',
     result: 'Wynik',

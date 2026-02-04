@@ -61,9 +61,9 @@ const japanese = {
     seo: {
       title: 'アバウトとビッグファイブチーム',
       description:
-        'BigFiveには非常に活発で熱心なチームがあり、BigFiveを前進させるために絶えず努力しています。'
-    }
-  },
+      title: 'Swan személyiségelemző teszt',
+      description:
+        'Próbáld ki a Swan személyiségelemző tesztet, amely tudományosan megalapozott módszerrel segít jobban megismerni önmagad és személyiséged főbb jellemzőit.'
   toolbar: {
     home: 'ホーム',
     result: '結果',

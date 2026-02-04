@@ -11,7 +11,7 @@ const deutsh = {
     seo: {
       title: 'Kostenloser open-source BigFive Persönlichkeitstest',
       description:
-        'Machen Sie einen kostenlosen open-source Persönlichkeitstest. Lernen Sie Ihre Persönlichkeitsmerkmale kennen und vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.'
+         'Próbáld ki a Swan személyiségelemző tesztet, die wissenschaftlich fundierte Methode, um sich selbst und die Hauptmerkmale Ihrer Persönlichkeit besser kennenzulernen.'
     },
     title: 'Big Five Persönlichkeitstest',
     call_to_action: 'Nehmen Sie jetzt teil',

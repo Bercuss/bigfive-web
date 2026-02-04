@@ -11,7 +11,7 @@ const dansk = {
     seo: {
       title: 'Gratis open source big five personlighedstest',
       description:
-        'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
+         'Prøv Swan personlighedstest, som er en videnskabeligt baseret metode til bedre at forstå dig selv og dine personlighedstræk.'
     },
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',

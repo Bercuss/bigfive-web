@@ -99,7 +99,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     pages: 'содержание',
     languages: 'языки',
     save: 'Save',
-    close: 'Close'
+          'Попробуйте тест Swan, научно обоснованный способ лучше узнать себя и основные черты своей личности.'
   },
   form: {
     information: 'Информация',

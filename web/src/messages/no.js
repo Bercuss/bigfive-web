@@ -62,9 +62,9 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Om "big five" laget',
       description:
-        'BigFive har et veldig aktivt og engasjert team som hele tiden prøver å presse BigFive fremover.BigFive har et veldig aktivt og engasjert team som hele tiden prøver å presse BigFive fremover.'
-    }
-  },
+      title: 'Swan személyiségelemző teszt',
+      description:
+        'Próbáld ki a Swan személyiségelemző tesztet, amely tudományosan megalapozott módszerrel segít jobban megismerni önmagad és személyiséged főbb jellemzőit.'
   toolbar: {
     home: 'Hjem',
     result: 'Resultater',

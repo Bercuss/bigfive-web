@@ -11,7 +11,7 @@ const svenska = {
     seo: {
       title: 'Gratis open source big five personlighetstest',
       description:
-        'Ta ett gratis, open source Big Five-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
+          'Prova Swan personlighetstestet, en vetenskapligt baserad metod för att bättre förstå dig själv och dina viktigaste personlighetsdrag.'
     },
     title: 'Big Five personlighetstest',
     call_to_action: 'Starta testet',
