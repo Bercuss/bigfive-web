@@ -10,8 +10,7 @@ const english = {
   frontpage: {
     seo: {
         title: 'Swan személyiségelemző teszt',
-        description:
-          'Próbáld ki a Swan személyiségelemző tesztet, amely tudományosan megalapozott módszerrel segít jobban megismerni önmagad és személyiséged főbb jellemzőit.'
+         description: ''
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
