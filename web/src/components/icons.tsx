@@ -5,7 +5,7 @@ import { IconSvgProps } from '@/types';
 
 export const Logo = ({ size = 200, width, height, ...props }: any) => (
   <img
-    src="/nev_V.svg"
+    src="/swan-logo.svg"
     alt="SWAN"
     height={size || height}
     width={size || width}
