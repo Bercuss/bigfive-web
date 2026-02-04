@@ -52,7 +52,7 @@ export const Survey = ({
   const [idError, setIdError] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const { width } = useWindowDimensions();
-  const seconds = useTimer();
+  // const seconds = useTimer();
 
   useEffect(() => {
     setIsMounted(true);
@@ -162,7 +162,7 @@ export const Survey = ({
       testId: 'b5-120',
       lang: language,
       invalid: false,
-      timeElapsed: seconds,
+      // timeElapsed: seconds, // törölve: stopper eltávolítva
       dateStamp: new Date(),
       answers,
       customId: customId || undefined
@@ -270,7 +270,7 @@ export const Survey = ({
         value={progress}
         className='max-w'
         showValueLabel={true}
-        label={formatTimer(seconds)}
+        label={'Progress: ' + progress + '%'} // Updated to remove timer display
         minValue={0}
         maxValue={100}
         size='lg'
