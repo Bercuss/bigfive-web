@@ -2,7 +2,8 @@ export default {
   // Fordítsd le a szükséges kulcsokat magyarra
   seo: {
     title: 'Swan személyiségelemző teszt',
-    description: ''
+    description: '',
+    keywords: 'személyiségteszt, big five, pszichológia, személyiség, elemzés, Swan'
   },
   toolbar: {
     home: 'Főoldal',
@@ -18,5 +19,15 @@ export default {
     information: 'Információ',
     informationText: '',
     // ...további kulcsok
+  },
+  frontpage: {
+    title: 'Főoldal',
+    description: 'Üdvözlünk a Swan személyiségteszt oldalán! Töltsd ki a Big Five tesztet, és ismerd meg jobban önmagad.'
+  },
+  facets: 'Faktorok',
+  getResult: 'Eredmény lekérése',
+  about: {
+    title: 'Rólunk',
+    description: 'Tudj meg többet a Swan személyiségtesztről és a Big Five modellről.'
   }
 };

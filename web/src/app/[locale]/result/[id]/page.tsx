@@ -70,7 +70,6 @@ const Results = ({ report, showExpanded }: ResultsProps) => {
         <div className='flex-grow'>
           <ReportLanguageSwitch
             language={report.language}
-            availableLanguages={report.availableLanguages}
           />
         </div>
         <Chip>{new Date(report.timestamp).toLocaleDateString()}</Chip>
