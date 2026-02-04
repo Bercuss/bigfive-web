@@ -14,6 +14,7 @@ export type Language = {
 };
 
 export const languages: Language[] = [
+  { code: 'hu', name: 'Hungarian', countryCode: 'hu' },
   { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] }
 ];
 
