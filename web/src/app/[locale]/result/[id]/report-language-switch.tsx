@@ -6,13 +6,17 @@ import { Language } from '@bigfive-org/results';
 import { useRouter } from '@/navigation';
 
 export const ReportLanguageSwitch = ({
-  language,
-  availableLanguages
+  language
 }: {
   language: string;
-  availableLanguages: Language[];
 }) => {
   const router = useRouter();
+
+  // Csak angol és magyar
+  const fixedLanguages = [
+    { id: 'hu', text: 'Hungarian' },
+    { id: 'en', text: 'English' }
+  ];
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const selectedLanguage = event.target.value;
@@ -31,7 +35,7 @@ export const ReportLanguageSwitch = ({
         size='sm'
         label='Report language'
       >
-        {availableLanguages.map((lang) => (
+        {fixedLanguages.map((lang) => (
           <SelectItem key={lang.id} value={lang.id} textValue={lang.text}>
             {lang.text}
           </SelectItem>

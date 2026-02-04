@@ -11,10 +11,15 @@ interface TestLanguageSwitchProps {
 }
 
 export const TestLanguageSwitch = ({
-  availableLanguages,
   language
 }: TestLanguageSwitchProps) => {
   const router = useRouter();
+
+  // Csak angol és magyar
+  const fixedLanguages = [
+    { id: 'hu', text: 'Hungarian' },
+    { id: 'en', text: 'English' }
+  ];
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const selectedLanguage = event.target.value;
@@ -32,13 +37,12 @@ export const TestLanguageSwitch = ({
         name='localeSelectSmall'
         className='w-48'
         label='Survey language'
-        items={availableLanguages}
       >
-        {(language) => (
-          <SelectItem key={language.id} value={language.id}>
-            {language.text}
+        {fixedLanguages.map((lang) => (
+          <SelectItem key={lang.id} value={lang.id}>
+            {lang.text}
           </SelectItem>
-        )}
+        ))}
       </Select>
     </div>
   );
