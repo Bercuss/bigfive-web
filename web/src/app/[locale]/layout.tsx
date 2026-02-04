@@ -34,9 +34,9 @@ export async function generateMetadata({
     keywords: s('keywords'),
     authors: [{ name: 'Jonas Enge', url: 'https://bigfive-test.com' }],
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon-16x16.png',
-      apple: '/apple-touch-icon.png'
+      icon: '/favicon.png',
+      shortcut: '/favicon.png',
+      apple: '/favicon.png'
     },
     metadataBase: new URL('https://bigfive-test.com'),
     // alternates: {
