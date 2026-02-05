@@ -79,6 +79,19 @@ export default function Home({ params: { locale } }: Props) {
       <div>
         <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
+            <div className='mb-4 rounded-md border-l-4 border-orange-500 bg-orange-50 p-4 text-sm text-orange-800'>
+              <p className='font-semibold'>Építés alatt!</p>
+              <p className='mt-1'>
+                A rendszer jelenleg tesztüzemben van. Hibák, pontatlanságok fordulhatnak elő.
+              </p>
+              <p className='mt-1'>
+                Amennyiben hibát észlel kérjük vegye fel velünk a kapcsolatot:
+                {' '}
+                <a href='mailto:swan-datingagency@proton.me' className='underline'>
+                  swan-datingagency@proton.me
+                </a>
+              </p>
+            </div>
             <div className='flex flex-col md:flex-row items-center gap-4 justify-center'>
               <Link
                 href='/test'
