@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm --filter @bigfive-org/questions build && pnpm --filter @bigfive-org/results build && pnpm --filter @bigfive-org/score build && next build",
     "start": "next start --turbo",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
