@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	experimental: {
+		externalDir: true
+	},
 	webpack: (config) => {
 		config.resolve = config.resolve || {};
 		config.resolve.alias = config.resolve.alias || {};

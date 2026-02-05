@@ -3,7 +3,7 @@
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
-import calculateScore from '../../../packages/score/build/src';
+import calculateScore from '@bigfive-org/score';
 import generateResult, { getInfo } from '@bigfive-org/results';
 
 const collectionName = process.env.DB_COLLECTION || 'results';
