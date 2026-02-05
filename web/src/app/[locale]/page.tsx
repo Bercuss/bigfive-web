@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Link } from '@nextui-org/link';
+import { Link } from '@/navigation';
 import { button as buttonStyles } from '@nextui-org/theme';
 import { title, subtitle } from '@/components/primitives';
 import clsx from 'clsx';
