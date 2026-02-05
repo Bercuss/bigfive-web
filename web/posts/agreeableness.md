@@ -1,13 +1,14 @@
+
 ---
 title: Agreeableness
-date: 2021-12-24
 description: An article on the personality trait agreeableness.
+date: 2021-12-24
 image: '/blog/traits/agreeableness_2.webp'
 author:
   name: Jonas Enge
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  avatar: "/avatars/maccyber.webp"
 ---
 
 Agreeableness reflects individual differences in concern with cooperation and social harmony. Agreeable individuals value getting along with others.

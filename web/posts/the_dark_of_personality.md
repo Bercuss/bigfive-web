@@ -7,8 +7,7 @@ author:
   name: 'Jonas Enge'
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
----
+  avatar: "/avatars/maccyber.webp"
 
 Welcome to the exploration of one of the most intriguing concepts in personality psychology: the Dark Core of Personality, or simply "D".
 In a comprehensive study by Morten Moshagen and his colleagues from Ulm University, they delve into the darker side of human traits,

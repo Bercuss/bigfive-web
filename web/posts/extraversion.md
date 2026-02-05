@@ -1,13 +1,14 @@
+
 ---
 title: Extraversion
-date: 2021-12-24
 description: An article on the personality trait extraversion.
+date: 2021-12-24
 image: '/blog/traits/extraversion_3.webp'
 author:
-  name: 'Jonas Enge'
-  username: 'maccyber'
+  name: Jonas Enge
+  username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  avatar: "/avatars/maccyber.webp"
 ---
 
 Extraversion is marked by pronounced engagement with the external world.

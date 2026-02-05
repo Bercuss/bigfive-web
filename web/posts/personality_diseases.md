@@ -1,13 +1,14 @@
+
 ---
 title: Can Personality Affect What Diseases We Get?
-date: 2024-04-20
 description: Australian researchers find links between personality traits and serious diseases.
+date: 2024-04-20
 image: '/blog/sick_link_personality.webp'
 author:
-  name: 'Jonas Enge'
+  name: Jonas Enge
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  avatar: "/avatars/maccyber.webp"
 ---
 
 ### Outgoing Personalities and Health

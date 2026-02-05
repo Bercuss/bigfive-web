@@ -1,13 +1,14 @@
+
 ---
 title: Conscientiousness
-date: 2021-12-24
 description: An article on the personality trait Conscientiousness.
+date: 2021-12-24
 image: '/blog/traits/conscientiousness_2.webp'
 author:
-  name: 'Jonas Enge'
-  username: 'maccyber'
+  name: Jonas Enge
+  username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  avatar: "/avatars/maccyber.webp"
 ---
 
 Conscientiousness concerns the way in which we control, regulate, and direct our impulses.

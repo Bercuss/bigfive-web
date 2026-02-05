@@ -7,10 +7,10 @@ author:
   name: 'Jonas Enge'
   username: 'maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
----
 
-Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.
+  avatar: "/avatars/maccyber.webp"
+
+
 
 Open people are intellectually curious, appreciative of art, and sensitive to beauty. They tend to be, compared to closed people, more aware of their feelings. They tend to think and act in individualistic and nonconforming ways.
 

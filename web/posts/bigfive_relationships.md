@@ -1,13 +1,14 @@
+
 ---
 title: Exploring the Links Between Personality and Relationship Satisfaction
-date: 2024-04-20
 description: A study examines how the Big Five personality traits impact relationship satisfaction
+date: 2024-04-20
 image: '/blog/couple_in_love.webp'
 author:
-  name: 'Jonas Enge'
+  name: Jonas Enge
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  avatar: "/avatars/maccyber.webp"
 ---
 
 In a fascinating study published in 2016, researchers delved into how the Big Five personality traits—neuroticism, agreeableness, conscientiousness, extraversion, and openness—play a significant role in romantic relationships, particularly when mediated by self-esteem.

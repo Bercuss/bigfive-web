@@ -7,8 +7,7 @@ author:
   name: 'Jonas Enge'
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
----
+  avatar: "/avatars/maccyber.webp"
 
 Recent research in the Journal of Research in Personality spearheaded by Martina Pocrnic from the University of Zagreb has provided new insights into how personality traits influence our ability to satisfy our basic psychological needs — autonomy, competence, and relatedness. This study identifies the traits that are pivotal in caring for these essential aspects of our well-being.
 

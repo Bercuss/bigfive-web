@@ -7,10 +7,8 @@ author:
   name: 'Jonas Enge'
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
----
+  avatar: "/avatars/maccyber.webp"
 
-Research across multiple studies has consistently shown that the personality trait of conscientiousness plays a significant role in predicting a longer lifespan.
 Conscientiousness describes individuals who are generally responsible, organized, and disciplined.
 These traits contribute to healthier lifestyles, as conscientious individuals are more likely to engage in positive health behaviors such as regular exercise, balanced eating, moderate alcohol consumption, and avoiding smoking.
 They also tend to be diligent in following medical advice and maintaining regular check-ups, which supports their overall health and longevity.
