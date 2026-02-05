@@ -38,8 +38,18 @@ export interface DomainInput {
 
 export type Scores = Record<string, DomainInput>;
 
-// export type Template = Record<string, Domain>;
-
+export interface Domain {
+  domain: string;
+  title: string;
+  shortDescription: string;
+  description: string;
+  scoreText?: string;
+  count: number;
+  score: number;
+  // facets are enriched at runtime based on scores
+  facets: any[];
+  text?: string;
+}
 
 export interface ResultOptions {
   language: LanguageCode;

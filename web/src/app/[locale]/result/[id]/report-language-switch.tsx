@@ -2,7 +2,6 @@
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
-import { Language } from '@bigfive-org/results';
 import { useRouter } from '@/navigation';
 
 export const ReportLanguageSwitch = ({

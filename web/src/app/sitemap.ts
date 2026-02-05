@@ -14,7 +14,9 @@ const articles = [
   'the_dark_of_personality',
   'link_between_personality_trais_psychological_needs'
 ];
-const resultLanguages = getInfo().languages.map((l) => l.id);
+const resultLanguages = (getInfo().languages as { code: string; name: string }[]).map(
+  (l) => l.code
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const alternatesPageLang = (path: string = '') =>

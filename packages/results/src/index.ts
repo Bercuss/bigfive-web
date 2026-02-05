@@ -1,6 +1,6 @@
-import { LanguageCode } from "./data/languages";
+import { LanguageCode, type Language } from "./data/languages";
 import languages from "./data/languages";
-import { TemplateDomain, Scores, FacetOptions, ResultOptions, DomainOptions } from "./types";
+import { TemplateDomain, Scores, FacetOptions, ResultOptions, DomainOptions, Domain } from "./types";
 
 export default async function(options: ResultOptions) {
   const template = await getTemplate(options.language)
@@ -41,7 +41,7 @@ export async function getTemplate(language: string): Promise<TemplateDomain[]> {
 }
 
 export function generateResult(scores: Scores, template: TemplateDomain[]) {
-  return Object.keys(scores).map((key: string) => {
+  return Object.keys(scores).map((key: string): Domain => {
     const { result, count, score } = scores[key];
     const domainTemplate = template.find(template => template.domain === key);
 
@@ -68,3 +68,6 @@ export function generateResult(scores: Scores, template: TemplateDomain[]) {
     };
   });
 }
+
+// Re-export types for downstream TypeScript consumers
+export type { Language, Domain };

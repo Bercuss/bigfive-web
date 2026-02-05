@@ -4,14 +4,13 @@ import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
 import calculateScore from '@bigfive-org/score';
-import generateResult, {
-  getInfo,
-  Language,
-  Domain
-} from '@bigfive-org/results';
+import generateResult, { getInfo } from '@bigfive-org/results';
 
 const collectionName = process.env.DB_COLLECTION || 'results';
-const resultLanguages = getInfo().languages;
+
+type Language = { code: string; name: string; id?: string };
+const resultLanguages = getInfo().languages as Language[];
+type Domain = any;
 
 export type Report = {
   id: string;
@@ -55,7 +54,7 @@ export async function getTestResult(
       language ||
       (!!resultLanguages.find((l) => l.id == report.lang) ? report.lang : 'en');
     const scores = calculateScore({ answers: report.answers });
-    const results = generateResult({ lang: selectedLanguage, scores });
+    const results = (generateResult as any)({ lang: selectedLanguage, scores }) as any[];
     return {
       id: report._id.toString(),
       timestamp: report.dateStamp,

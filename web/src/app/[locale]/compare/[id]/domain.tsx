@@ -2,7 +2,6 @@
 
 import { heading } from '@/components/primitives';
 import Link from 'next/link';
-import { Facet } from '@bigfive-org/results';
 import { BarChartCompare } from '@/components/bar-chart-generic';
 
 interface DomainProps {
@@ -13,7 +12,7 @@ interface DomainProps {
 
 type NamedScore = {
   name: string;
-  facets: Facet[];
+  facets: { title: string; score: number }[];
 };
 
 export const DomainComparePage = ({

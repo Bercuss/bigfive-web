@@ -2,9 +2,23 @@
 
 import { subtitle, heading } from '@/components/primitives';
 import Link from 'next/link';
-import { Facet, Domain } from '@bigfive-org/results';
 import { BarChart } from '@/components/bar-chart';
 import ReadMore from '@/components/read-more';
+
+type Facet = {
+  title: string;
+  score: number;
+  scoreText?: string;
+  text: string;
+};
+
+type Domain = {
+  title: string;
+  shortDescription: string;
+  description: string;
+  text?: string;
+  facets: Facet[];
+};
 
 interface DomainProps {
   domain: Domain;

@@ -1,0 +1,9 @@
+{
+  "name": "bigfive-web-workspace",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "pnpm --filter @bigfive-org/questions build && pnpm --filter @bigfive-org/results build && pnpm --filter @bigfive-org/score build && pnpm --filter bigfive-web-next build",
+    "dev": "pnpm --filter bigfive-web-next dev"
+  }
+}

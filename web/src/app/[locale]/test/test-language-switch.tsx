@@ -2,11 +2,10 @@
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
-import { Language } from '@bigfive-org/questions';
 import { useRouter } from '@/navigation';
 
 interface TestLanguageSwitchProps {
-  availableLanguages: Language[];
+  availableLanguages: { code: string; name: string }[];
   language: string;
 }
 

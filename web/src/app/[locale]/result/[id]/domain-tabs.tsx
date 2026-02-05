@@ -1,9 +1,10 @@
 'use client';
 
 import { Button, ButtonGroup, Select, SelectItem } from '@nextui-org/react';
-import { Domain } from '@bigfive-org/results';
 import { useState } from 'react';
 import { DomainPage } from './domain';
+
+type Domain = any;
 
 interface DomainTabsProps {
   results: Domain[];
