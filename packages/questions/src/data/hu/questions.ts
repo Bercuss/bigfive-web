@@ -15,7 +15,7 @@ const questions = [
   },
   {
     id: '888dd864-7449-4e96-8d5c-7a439603ea91',
-    text: 'Élénk képzelőerőm van',
+    text: 'Élénk a fantáziám',
     keyed: 'plus',
     domain: 'O',
     facet: 1
