@@ -30,7 +30,7 @@ export default function AboutPage({ params: { locale } }: Props) {
       </div>
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p>
-          Welcome to bigfive-test.com, your premier destination for exploring
+          Welcome to swan-test.vercel.app, your premier destination for exploring
           personality traits using the scientifically acclaimed Big Five model.
           Our free, open-source test offers detailed insights into the five key
           dimensions of personality: Openness, Conscientiousness, Extraversion,
@@ -44,7 +44,7 @@ export default function AboutPage({ params: { locale } }: Props) {
         <p>
           Developed with precision and accessibility in mind, our test helps you
           understand yourself better and foster personal growth. Embrace the
-          journey of self-discovery with bigfive-test.com, where psychological
+          journey of self-discovery with swan-test.vercel.app, where psychological
           insights meet user-friendly technology.
         </p>
         <br />
@@ -54,7 +54,7 @@ export default function AboutPage({ params: { locale } }: Props) {
             FAQ
           </Link>{' '}
           first. If you can&apos;t find an answer there, feel free to contact us
-          at bigfive-test@rubynor.com.
+          at swan-test@rubynor.com.
         </p>
       </div>
       <section>

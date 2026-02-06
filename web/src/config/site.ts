@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 export type SiteConfig = typeof siteConfig;
 
-export const basePath = 'https://bigfive-test.com';
+export const basePath = 'https://swan-test.vercel.app';
 
 export const supportEmail = 'bigfive-test@rubynor.com';
 

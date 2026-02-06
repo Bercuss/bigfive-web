@@ -32,13 +32,13 @@ export async function generateMetadata({
     },
     description: t('seo.description'),
     keywords: s('keywords'),
-    authors: [{ name: 'Jonas Enge', url: 'https://bigfive-test.com' }],
+    authors: [{ name: 'Jonas Enge', url: 'https://swan-test.vercel.app' }],
     icons: {
       icon: '/favicon.png',
       shortcut: '/favicon.png',
       apple: '/favicon.png'
     },
-    metadataBase: new URL('https://bigfive-test.com'),
+    metadataBase: new URL('https://swan-test.vercel.app'),
     // alternates: {
     //   canonical: '/',
     //   languages: alternatesLang
@@ -115,7 +115,7 @@ export default async function RootLayout({
           </div>
         </Providers>
         <Script
-          src='https://bigfive-test.com/sw.js'
+          src='https://swan-test.vercel.app/sw.js'
           strategy='beforeInteractive'
         />
         <Analytics />

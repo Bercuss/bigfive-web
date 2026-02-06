@@ -2,7 +2,7 @@
 
 Calculate score for big five tests.
 
-See https://bigfive-test.com
+See https://swan-test.vercel.app
 
 ## Installation
 
