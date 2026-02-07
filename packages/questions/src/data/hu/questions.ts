@@ -8,7 +8,7 @@ const questions = [
   },
   {
     id: 'd50a597f-632b-4f7b-89e6-6d85b50fd1c9',
-    text: 'Könnyen szerzek barátokat',
+    text: 'Könnyen barátkozok',
     keyed: 'plus',
     domain: 'E',
     facet: 1
