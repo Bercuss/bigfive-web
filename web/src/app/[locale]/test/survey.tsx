@@ -226,19 +226,21 @@ export const Survey = ({
   return (
     <div className='mt-2'>
       {isMounted && (
-        <Modal isOpen={showIdModal} backdrop='blur' isDismissable={false}>
+        <Modal
+          isOpen={showIdModal}
+          backdrop='blur'
+          isDismissable={false}
+          hideCloseButton
+        >
           <ModalContent>
             <ModalHeader className='flex flex-col gap-1'>
-              Test Identifier
+              Bejelentkezés
             </ModalHeader>
             <ModalBody>
-              <p>
-                Please enter a unique identifier for this test. You can use this identifier later to retrieve your results.
-              </p>
               <Input
                 type='text'
-                label='Identifier'
-                placeholder='e.g. John_Smith_2024'
+                label='Azonosító'
+                placeholder='Pl.: 1234'
                 value={customId}
                 onChange={(e) => {
                   setCustomId(e.target.value);
@@ -253,13 +255,23 @@ export const Survey = ({
                 }}
               />
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className='w-full flex justify-between'>
+              <Button
+                variant='bordered'
+                onPress={() => {
+                  if (typeof window !== 'undefined') {
+                    window.history.back();
+                  }
+                }}
+              >
+                Vissza
+              </Button>
               <Button
                 color='primary'
                 onPress={handleStartTest}
                 disabled={!customId.trim()}
               >
-                Start Test
+                Teszt indítása
               </Button>
             </ModalFooter>
           </ModalContent>
