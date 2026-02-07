@@ -74,6 +74,9 @@ export default function Footer({ footerLinks }: FooterProps) {
       <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
         © {year} — B5 Holding AS - all rights reserved.
       </div>
+      <div className='flex text-xs text-gray-500 mt-2 justify-center'>
+        Created by Swan in 2026 under the MIT License.
+      </div>
     </footer>
   );
 }

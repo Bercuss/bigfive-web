@@ -3,6 +3,7 @@ import { Metadata, Viewport } from 'next';
 import { fontSans } from '@/config/fonts';
 import { Providers } from '../providers';
 import { Navbar } from '@/components/navbar';
+import Footer from '@/components/footer';
 import clsx from 'clsx';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -112,6 +113,7 @@ export default async function RootLayout({
               {children}
               <CookieBanner />
             </main>
+            <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
         <Script
