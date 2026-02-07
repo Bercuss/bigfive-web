@@ -1,7 +1,7 @@
 const choices = {
   plus: [
     {
-      text: 'Egyáltalán nem iagz rám',
+      text: 'Egyáltalán nem igaz rám',
       score: 1,
       color: 1
     },
